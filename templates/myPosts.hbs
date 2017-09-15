@@ -1,0 +1,29 @@
+{{>header}}
+{{#if posts}}
+<div class="content">
+    {{>navbar}}
+<section id="viewMyPosts">
+    <div class="post post-content">
+        <h1>Your Posts</h1>
+    </div>
+    <div class="posts">
+        {{# each posts}}
+            {{>post}}
+        {{/each}}
+    </div>
+</section>
+</div>
+{{else}}
+<div class="content">
+    {{>navbar}}
+    <section id="viewMyPosts">
+        <div class="post post-content">
+            <h1>Your Posts</h1>
+        </div>
+        <div class="posts">
+            <p>No posts available !</p>
+        </div>
+    </section>
+</div>
+{{/if}}
+{{>footer}}

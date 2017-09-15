@@ -1,0 +1,27 @@
+{{>header}}
+
+{{#if posts}}
+<div class="content">
+    {{>navbar}}
+<section id="viewCatalog">
+    <div class="posts">
+        {{#each posts}}
+            {{>post}}
+        {{/each}}
+    </div>
+</section>
+</div>
+{{else}}
+    <div class="content">
+        {{>navbar}}
+        <section id="viewCatalog">
+            <div class="posts">
+                <span>
+                    No posts available.
+                </span>
+            </div>
+        </section>
+    </div>
+{{/if}}
+
+{{>footer}}
